@@ -24,3 +24,7 @@ var inspectCmd = &cobra.Command{
   },
 }
 
+func init() {
+  inspectCmd.Flags().BoolVarP(&onlyDigits, "digits", "d", false, "Count only digits")
+  rootCmd.AddCommand(inspectCmd)
+}
